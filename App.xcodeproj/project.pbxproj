@@ -13,8 +13,23 @@
 		3F6339AE1E9ABF920017CC5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6339AC1E9ABF920017CC5C /* Main.storyboard */; };
 		3F6339B01E9ABF920017CC5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F6339AF1E9ABF920017CC5C /* Assets.xcassets */; };
 		3F6339B31E9ABF920017CC5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6339B11E9ABF920017CC5C /* LaunchScreen.storyboard */; };
+		3F6339D81E9AC81C0017CC5C /* Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6339D71E9AC81C0017CC5C /* Framework.framework */; };
+		3F6339D91E9AC8470017CC5C /* Framework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3F6339D71E9AC81C0017CC5C /* Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FE2A3D29D5C1E9BCDBC55ADC /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA32E61DF6C246AF4A96CF2 /* Pods_App.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3F6339D51E9AC7B90017CC5C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3F6339D91E9AC8470017CC5C /* Framework.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0BA32E61DF6C246AF4A96CF2 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +44,7 @@
 		3F6339AF1E9ABF920017CC5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F6339B21E9ABF920017CC5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F6339B41E9ABF920017CC5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F6339D71E9AC81C0017CC5C /* Framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA42E8A489FABDCC2739F50 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6339D81E9AC81C0017CC5C /* Framework.framework in Frameworks */,
 				FE2A3D29D5C1E9BCDBC55ADC /* Pods_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +115,7 @@
 		87B17C00723403C2AF7DEB12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F6339D71E9AC81C0017CC5C /* Framework.framework */,
 				0BA32E61DF6C246AF4A96CF2 /* Pods_App.framework */,
 			);
 			name = Frameworks;
@@ -116,6 +134,7 @@
 				3F63399E1E9ABF920017CC5C /* Resources */,
 				55829419C85944C1C29FFBD5 /* [CP] Embed Pods Frameworks */,
 				33448C60CF79944C67B95A75 /* [CP] Copy Pods Resources */,
+				3F6339D51E9AC7B90017CC5C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -137,6 +156,7 @@
 				TargetAttributes = {
 					3F63399F1E9ABF920017CC5C = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 7A5BJMR95M;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -350,7 +370,13 @@
 			baseConfigurationReference = 147D986C8A2F41241D5B4616 /* Pods-App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7A5BJMR95M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.ruenzuo.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -362,7 +388,13 @@
 			baseConfigurationReference = CDA42E8A489FABDCC2739F50 /* Pods-App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7A5BJMR95M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.ruenzuo.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -388,6 +420,7 @@
 				3F6339B91E9ABF920017CC5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
