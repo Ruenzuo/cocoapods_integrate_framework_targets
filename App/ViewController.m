@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 @import Framework;
+@import Material;
 
 @interface ViewController ()
 
@@ -20,6 +21,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     SomeClass *class = [[SomeClass alloc] init];
     [class doSomething];
+    UIImage *image = [UIApplication sharedApplication].keyWindow.capture;
 }
 
 

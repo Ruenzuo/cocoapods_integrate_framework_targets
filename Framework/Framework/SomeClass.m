@@ -7,11 +7,12 @@
 //
 
 #import "SomeClass.h"
+@import AFNetworking;
 
 @implementation SomeClass
 
 - (void)doSomething {
-    
+    [AFNetworkReachabilityManager class];
 }
 
 @end
